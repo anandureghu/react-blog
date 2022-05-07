@@ -1,0 +1,42 @@
+.navbar{
+    img{
+        width: 45px;
+        height: 45px;
+        cursor: pointer;
+    }
+
+    .container{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .links{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        text-transform: uppercase;
+
+        .link{
+            list-style: none;
+            cursor: pointer;
+
+            a{
+                text-decoration: none;
+                color: black;
+
+                &:hover{
+                    color:#DF1F3B;
+                    transition: all 0.2s ease-in;
+                    border-bottom: 2px solid #DF1F3B;
+                }
+            }
+
+            &:hover{
+                color:#DF1F3B;
+                transition: all 0.2s ease-in;
+            }
+        }
+    }
+}

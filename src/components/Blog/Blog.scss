@@ -1,0 +1,31 @@
+.blog{
+    max-width: 250px;
+    min-width: 200px;
+    box-shadow: 2px 4px 10px rgba(0,0,0, 0.06);
+    border-radius: 8px;
+    flex: 1;
+
+    a{
+        text-decoration: none;
+        color: black;
+    }
+
+    .body{
+        padding: 20px;
+    }
+
+    .cover{
+        width: 100%;
+        object-fit: cover;  
+        border-radius: 8px 8px 0px 0px;  
+    }
+
+    .title{
+        text-transform: capitalize;
+        font-weight: 600;
+    }
+
+    .description{
+        font-weight: 400;
+    }
+}

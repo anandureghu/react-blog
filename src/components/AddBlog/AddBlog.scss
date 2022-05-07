@@ -1,0 +1,17 @@
+.add-blog{
+    position: fixed;
+    right: 8%;
+    bottom: 40px;
+    height: 40px;
+    width: 40px;
+    background-color: #DF1F3B;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0px 2px 6px rgba(0,0,0,0.6);
+    z-index: 999;
+}
