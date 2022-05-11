@@ -4,7 +4,7 @@ import images from '../../constants/images';
 import './CreateBlogForm.scss'
 
 function CreateBlogForm() {
-    const {isCreateFormActive, setIsCreateFormActive} = useContext(BlogContext);
+    const {isCreateFormActive, setIsCreateFormActive, createBlog} = useContext(BlogContext);
 
     const initialValue = {
         title: '',
@@ -17,19 +17,21 @@ function CreateBlogForm() {
     const handleCreateBlog = e => {
         e.preventDefault();
         console.log(data)
+        createBlog(data)
+        setIsCreateFormActive(false)
     }
 
     const handleChange = e => {
         e.preventDefault();
-        console.log(data)
+        // console.log(data)
         const key = e.target.name;
         const value = e.target.value;
 
-        console.log(e.target.value)
-        // setData({
-        //     ...data,
-        //     `${key}`: value ,
-        // })
+        // console.log(e.target.value)
+        setData({
+            ...data,
+            [key]: value ,
+        })
     }
 
   return (
