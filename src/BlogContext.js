@@ -1,5 +1,6 @@
 import { createContext, useState } from "react";
 import { Navigate, useNavigate } from "react-router-dom";
+import axios from 'axios';
 
 const BlogContext = createContext({});
 
@@ -34,8 +35,11 @@ const BlogProvider = ({children}) => {
     const deleteBlog = async (id) => {
         // setLoading(true)
         console.log(`delete blog ${id}`);
-        fetch(`${URL}/${id}`, {
-            method: "DELETE"
+        axios({
+            url: `${URL}/${id}`,
+            method: 'DELETE',
+            headers: {
+            }
         })
         // setLoading(false)
     }
