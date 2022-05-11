@@ -33,11 +33,11 @@ function BlogPage() {
             <p className="time">{createdAt}</p>
             <p className="title">{title}</p>
         </div>
-        <img src="https://i.pinimg.com/originals/16/1c/ff/161cff19e668e270ccb1b98856ebd81e.png" alt={title} className="cover" />
         {/* <img src={cover.match("/(http(s?):)([/|.|\w|\s|-])*\.(?:jpg|gif|png)/")
         ? cover 
-        : "https://i.pinimg.com/originals/16/1c/ff/161cff19e668e270ccb1b98856ebd81e.png"} alt={title} className="cover" /> */}
+    : "https://i.pinimg.com/originals/16/1c/ff/161cff19e668e270ccb1b98856ebd81e.png"} alt={title} className="cover" /> */}
         <div className="container">
+            <img src={cover} alt={title} className="cover" />
             <p className="description">{description}</p>
         </div>
 

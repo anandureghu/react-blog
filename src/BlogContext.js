@@ -39,6 +39,7 @@ const BlogProvider = ({children}) => {
             url: `${URL}/${id}`,
             method: 'DELETE',
             headers: {
+                
             }
         })
         // setLoading(false)
