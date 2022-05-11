@@ -24,9 +24,11 @@ function Blogs() {
   return (
     <div className="blogs">
         <div className="container">
-            {blogs.map(blog => {
+            {blogs.length > 0
+            ? blogs.map(blog => {
                 return <Blog key={blog.id} blog={blog}/>
-            })}
+            }) 
+            : "No Blogs"}
         </div>
     </div>
   )
