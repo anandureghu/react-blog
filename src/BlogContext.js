@@ -5,7 +5,8 @@ const BlogContext = createContext({});
 
 const BlogProvider = ({children}) => {
 
-    const URL = "https://625d05f195cd5855d619695c.mockapi.io/api/v1/blogs";
+    // const URL = "https://625d05f195cd5855d619695c.mockapi.io/api/v1/blogs";
+    const URL = "http://localhost:8080/blogs"
 
     const [loading, setLoading] = useState(false)
     const [blogs, setBlogs] = useState([])
@@ -16,6 +17,9 @@ const BlogProvider = ({children}) => {
         const response = await fetch(URL);
         const data = await response.json();
         setBlogs(data);
+        if(response.status == 404){
+            setBlogs([])
+        }
     }
     
     const getBlog = async id => {
@@ -36,12 +40,24 @@ const BlogProvider = ({children}) => {
         // setLoading(false)
     }
 
+    const createBlog = async data => {
+        console.log("Context")
+        console.log(JSON.stringify(data))
+        const response = await fetch(URL, {
+            method: "POST",
+            body: JSON.stringify(data)
+        })
+        const responseData = await response.json()
+        console.log(responseData)
+    }
+
     const values = {
         blogs,
         blog,
         getBlogs,
         getBlog,
         deleteBlog,
+        createBlog,
         isCreateFormActive,
         setIsCreateFormActive
     }
