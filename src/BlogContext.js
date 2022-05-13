@@ -39,7 +39,7 @@ const BlogProvider = ({children}) => {
             url: `${URL}/${id}`,
             method: 'DELETE',
             headers: {
-                
+                "Content-Type": "application/x-www-form-urlencoded",
             }
         })
         // setLoading(false)
@@ -52,8 +52,8 @@ const BlogProvider = ({children}) => {
             method: "POST",
             body: JSON.stringify(data)
         })
-        const responseData = await response.json()
-        console.log(responseData)
+        // const responseData = await response.json()
+        // console.log(responseData)
     }
 
     const values = {
