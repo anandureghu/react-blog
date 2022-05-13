@@ -12,7 +12,7 @@ function Blog({blog}) {
             <img src={cover} alt={title} className="cover" />
             <div className="body">
                 <p className="title">{title}</p>
-                <p className="description">{description.substring(0, 45)}</p>
+                <p className="description"  dangerouslySetInnerHTML={{ __html: description.substring(0,55) }}/>
             </div>
           </Link>
       </div>

@@ -38,7 +38,7 @@ function BlogPage() {
     : "https://i.pinimg.com/originals/16/1c/ff/161cff19e668e270ccb1b98856ebd81e.png"} alt={title} className="cover" /> */}
         <div className="container">
             <img src={cover} alt={title} className="cover" />
-            <p className="description">{description}</p>
+            <p className="description" dangerouslySetInnerHTML={{ __html: description }}/>
         </div>
 
         <div className="icons">
